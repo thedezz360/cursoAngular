@@ -1,1 +1,11 @@
-<p>aqui iría un empleado</p>
+<p>Nombre del empleado: {{nombre }}</p>
+
+<p>Apellido del empleado: {{apellido }}</p>
+
+<p>Edad del empleado: {{edad >= 18 ? "Es mayor de edad" : "Es menor de edad"}}</p>
+
+<p>Empresa del empleado: {{empresa.value }}</p>
+<!-- text intermpolation -->
+<!-- al igualarlo a 0 el evento se ejecuta  -->
+<p>Introduce la empresa <input type="text" #empresa (input)="0" ></p>
+

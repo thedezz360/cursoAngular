@@ -11,6 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit {
 
+  //creamos propiedades
+  nombre : string = "Daniel";
+  apellido : string ="Zapata";
+  //empresa : string ="Pildoras Informaticas";
+  edad :  number = 18;
+
+  //defino funcion para evento
+  // setEmpresa(value:String){
+
+  // }
+
+  getEdad(){
+    return this.edad;
+  }
   constructor() { }
 
   ngOnInit(): void {
