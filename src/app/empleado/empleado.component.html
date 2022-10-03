@@ -5,7 +5,13 @@
 <p>Edad del empleado: {{edad >= 18 ? "Es mayor de edad" : "Es menor de edad"}}</p>
 
 <p>Empresa del empleado: {{empresa.value }}</p>
+
 <!-- text intermpolation -->
 <!-- al igualarlo a 0 el evento se ejecuta  -->
-<p>Introduce la empresa <input type="text" #empresa (input)="0" ></p>
+<!-- hacemos un property binding con disabled, la propiedad va entre corchetes -->
+<p>Introduce la empresa <input type="text" #empresa (input)="0"  [disabled]="habilitarInput"></p>
 
+<p>Registrado <input type="checkbox" name="registro" id="registro" [checked]="usuRegistrado"></p>
+
+<!-- llamamos a la funcion -->
+{{getRegistroUsuario()}}

@@ -22,9 +22,22 @@ export class EmpleadoComponent implements OnInit {
 
   // }
 
+  //property binding
+  habilitarInput=false;
+
+  //otro ejemplo de binding
+  usuRegistrado=false;
+
+  getRegistroUsuario(){
+    this.usuRegistrado=false;
+  }
+
+    //getter
   getEdad(){
     return this.edad;
   }
+
+  
   constructor() { }
 
   ngOnInit(): void {
