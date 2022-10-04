@@ -6,12 +6,23 @@
 
 <p>Empresa del empleado: {{empresa.value }}</p>
 
-<!-- text intermpolation -->
+<!-- text interpolation, se declara con # -->
 <!-- al igualarlo a 0 el evento se ejecuta  -->
-<!-- hacemos un property binding con disabled, la propiedad va entre corchetes -->
+<!-- hacemos un property binding con disabled, la propiedad va entre corchetes []-->
 <p>Introduce la empresa <input type="text" #empresa (input)="0"  [disabled]="habilitarInput"></p>
 
 <p>Registrado <input type="checkbox" name="registro" id="registro" [checked]="usuRegistrado"></p>
 
 <!-- llamamos a la funcion -->
 {{getRegistroUsuario()}}
+
+
+{{textoDeRegistro}}
+<!-- 1 ejemplo event binding  -->
+<p>ejemplo event binding, registrado <input type="checkbox" id="registro"  (click)="setUsuarioRegistrado($event)"></p>
+
+<!-- 2 ejemplo event binding -->
+<br>
+<p>Ejemplo event binding</p>
+<p>Registrado: <input type="radio" value="si"  name="registrado" (click)="setUsuarioRegistrado($event)"></p>
+<p>No Registrado: <input type="radio"  value="no" name="registrado" (click)="setUsuarioRegistrado($event)"></p>
