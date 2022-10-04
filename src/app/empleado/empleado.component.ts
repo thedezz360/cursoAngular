@@ -55,6 +55,11 @@ export class EmpleadoComponent implements OnInit {
   }
 
 
+  //ejemplo two way binding
+  empresa2="Google";
+
+ 
+
 
   constructor() { }
 

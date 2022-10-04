@@ -4,6 +4,7 @@
 
 <p>Edad del empleado: {{edad >= 18 ? "Es mayor de edad" : "Es menor de edad"}}</p>
 
+<!-- hacemos referencia al campo interpolado (#empresa) -->
 <p>Empresa del empleado: {{empresa.value }}</p>
 
 <!-- text interpolation, se declara con # -->
@@ -26,3 +27,10 @@
 <p>Ejemplo event binding</p>
 <p>Registrado: <input type="radio" value="si"  name="registrado" (click)="setUsuarioRegistrado($event)"></p>
 <p>No Registrado: <input type="radio"  value="no" name="registrado" (click)="setUsuarioRegistrado($event)"></p>
+
+<!-- Ejemplo two way binding -->
+<br><p>Ejemplo two way binding</p>
+<p>Empresa2 ejemplo : {{empresa2}}</p>
+<!-- debemos importar en app.module FormsModule -->
+<!-- para utilizar ngModule y banana in box[()] -->
+<p>introduce la empresa: <input type="text" [(ngModel)]="empresa2"></p>
